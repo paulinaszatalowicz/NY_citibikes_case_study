@@ -37,4 +37,7 @@ FROM     #using subquery to define an exact query
     ORDER BY 
         number_of_rides DESC 
  ```
- *
+ *How about checking how many subscribers(type of customer) start a trip at a certain station and which station is the most popular to start their trip from?*
+ ```SQL
+ 
+ ```
