@@ -26,7 +26,7 @@ FROM     #using subquery to define an exact query
             start_station_id,
             COUNT(*) number_of_rides
         FROM 
-            `bigquery-public-data.new_york_citibike.citibike_stations`
+            `bigquery-public-data.new_york_citibike.citibike_trips` #using second table in NY_citibike dataset
         GROUP BY 
             start_station_id
 
@@ -39,5 +39,18 @@ FROM     #using subquery to define an exact query
  ```
  *How about checking how many subscribers(type of customer) start a trip at a certain station and which station is the most popular to start their trip from?*
  ```SQL
- 
+ SELECT 
+    station_id,
+    name
+FROM 
+    `bigquery-public-data.new_york_citibike.citibike_stations`
+WHERE
+    station_id IN 
+(
+    SELECT 
+        start_station_id
+    FROM 
+        `bigquery-public-data.new_york_citibike.citibike_trips`
+    WHERE 
+        usertype = 'Subscriber'
  ```
