@@ -1,9 +1,9 @@
-###According to public data from BigQuery there are 1584 citibike stations in New York.###
+### According to public data from BigQuery there are 1584 citibike stations in New York.###
 
-###Managing such a project can be quite challenging. Data can help and answer questions in few seconds eg.:###
+### Managing such a project can be quite challenging. Data can help and answer questions in few seconds eg.:###
 
-*How many bikes are available?*
-*What is the average number of citibikes available in NY?*
+* How many bikes are available?*
+* What is the average number of citibikes available in NY?*
 
 ```SQL
 SELECT 
@@ -17,7 +17,7 @@ FROM
         `bigquery-public-data.new_york_citibike.citibike_stations`
 ```
 
-*How many trips start at a certain station?* 
+* How many trips start at a certain station?* 
 ```SQL
 SELECT 
     station_id,
